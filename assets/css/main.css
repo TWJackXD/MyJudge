@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'codicon';
+  src: url('/font/codicon.ttf') format('truetype');
+}
+
+html, body {
+  color-scheme: only light;
+  background-color: #ffffff;
+  color: #111827;
+}
+
+*{ font-family: 'Noto Sans TC'; }
+.monaco-editor *, code, pre, textarea{ font-family: 'Ubuntu Mono', 'Noto Sans TC' !important; }
+.monaco-editor .codicon { font-family: 'codicon' !important; }
+.hljs{ background: var(--color-gray-100) !important; }
+.hljs *{ font-family: 'Ubuntu Mono', 'Noto Sans TC' !important; }
+.MathJax *{ font-family: 'Times New Roman' !important; }
+
+code{ @apply bg-red-50 px-1 py-0.5 text-red-700 rounded }
+pre{ @apply p-3 bg-gray-100 border-1 border-gray-300 my-4 text-[11pt] rounded text-inherit whitespace-pre-wrap }
+hr{ @apply text-gray-300 my-5 }
+
+/* 確保空白段落可見 */
+p {
+  min-height: 1.5em;
+  margin-bottom: 0.5rem;
+}
+
+p:empty,
+p:has(br:only-child) {
+  min-height: 1.5em;
+  display: block;
+}
+
+p br:only-child {
+  display: block;
+  content: "";
+}
